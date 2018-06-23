@@ -46,26 +46,21 @@ var config = {
       var frequencyRate = childSnapshot.val().frequency;
 
       var firstTimeConverted = moment(currentTrainTime, "HH:mm").subtract(1, "years");
-      var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-      var tRemainder = diffTime % frequencyRate;
-      var tMinutesTillTrain = frequencyRate - tRemainder;
+      var differenceInTime = moment().diff(moment(firstTimeConverted), "minutes");
+      var timeRemainder = differenceInTime % frequencyRate;
+      var minutesUntillTrain = frequencyRate - timeRemainder;
 
 
         console.log(childSnapshot.val().name);
         console.log(childSnapshot.val().destination);
         console.log(childSnapshot.val().firstTrainTime);
         console.log(childSnapshot.val().frequency);
-
-        // minutes away from firstTrainTime
-
-        // firstTrainTime - current time = ??
-
         
 
         $("#train-table").append("<tr> <td> " + childSnapshot.val().name +
         " </td> <td> " + childSnapshot.val().destination +
         " </td> <td> " + childSnapshot.val().frequency +
-        " </td> <td> " + displayedTime + " </td> <td> " + tMinutesTillTrain + " </td> </tr> "
+        " </td> <td> " + displayedTime + " </td> <td> " + minutesUntillTrain + " </td> </tr> "
     );
   
   });

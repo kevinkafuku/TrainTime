@@ -1,0 +1,35 @@
+.card {
+    font-family: 'Cinzel', serif;
+    margin: auto;
+    background-color: aqua;
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+.display-4 {
+    color: white;
+}
+
+.lead {
+    color: white;
+}
+.card-body {
+    background-image: url("https://jetsettimes.com/wp-content/uploads/2014/09/tumblr-train-statio-munich-germany.jpg");
+}
+.card-header {
+    color: white;
+}
+.jumbotron {
+    width:80%;
+    margin:auto;
+    font-family: 'Cinzel', serif;
+    background-color: aqua;
+}
+
+.container {
+    background-image: url("assets/images/trainbackground.jpg");
+}
+
+body {
+    background-image: url("https://s-media-cache-ak0.pinimg.com/originals/6b/5b/08/6b5b08077b8ea556be3fb379941ca54e.jpg");
+}
